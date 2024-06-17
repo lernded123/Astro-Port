@@ -1,0 +1,54 @@
+---
+import '../styles/global.css'
+---
+
+
+
+<header>
+    <a href="#" class="logo">Sam <span>Salbador</span></a>
+
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+    <ul class="navlist">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+    <div class="top-btnn">
+        <a href="#" class="h-btn">Contact me</a>
+    </div>
+</header>
+
+
+<style>
+
+
+</style>
+
+
+<script>
+
+    const header = document.querySelector("header");
+
+window.addEventListener("scroll",function(){
+    header.classList.toggle ("sticky", window.scrollY > 120)
+});
+
+let menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.navlist')
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x')
+    navlist.classList.toggle('active')
+}
+
+window.onscroll = () => {
+    menu.classList.remove('bx-x')
+    navlist.classList.remove('active')
+}
+
+</script>
